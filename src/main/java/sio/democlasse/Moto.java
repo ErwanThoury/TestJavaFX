@@ -4,12 +4,27 @@ public class Moto {
     private String modele;
     private String couleur;
     private int vitesse;
+
     public Moto(String unMod, String uneCoul, int uneVit)
     {
         this.modele = unMod;
         this.couleur = uneCoul;
         this.vitesse = uneVit;
     }
+
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
+    public void setVitesse(int vitesse) {
+        this.vitesse = vitesse;
+    }
+
     public void accelerer(int kmh)
     {
         if (this.vitesse+kmh >= 130)
@@ -24,8 +39,8 @@ public class Moto {
         else
             this.vitesse -= kmh;
     }
-    public int litVitesse()
+    public String litVitesse()
     {
-        return this.vitesse;
+        return Integer.toString(this.vitesse);
     }
 }
